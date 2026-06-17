@@ -62,6 +62,75 @@
     });
   }
 
+  /* ---------- Formulaire de contact ---------- */
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    const status = document.getElementById("formStatus");
+    const showStatus = (msg, ok) => {
+      if (!status) return;
+      status.hidden = false;
+      status.textContent = msg;
+      status.classList.toggle("is-ok", ok);
+      status.classList.toggle("is-err", !ok);
+    };
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        showStatus("Merci de remplir les champs obligatoires.", false);
+        return;
+      }
+      // ▼ Brancher ici l'envoi réel (fetch vers votre API / service de mail) ▼
+      showStatus(
+        "Merci ! Votre message a bien été envoyé. Nous revenons vers vous sous 24–48 h.",
+        true
+      );
+      contactForm.reset();
+    });
+  }
+
+  /* ---------- Animation d'entrée de la page contact ---------- */
+  const contactGrid = document.querySelector(".contact-grid");
+  if (hasAnime && contactGrid) {
+    const intro = [
+      ".page-head .breadcrumb",
+      ".page-title",
+      ".contact-info",
+      ".contact-form > *",
+    ];
+    intro.forEach((sel) =>
+      document.querySelectorAll(sel).forEach((el) => (el.style.opacity = "0"))
+    );
+    anime
+      .timeline({ easing: "easeOutCubic" })
+      .add({
+        targets: ".page-head .breadcrumb, .page-title",
+        opacity: [0, 1],
+        translateY: [24, 0],
+        duration: 650,
+        delay: anime.stagger(120),
+      })
+      .add(
+        {
+          targets: ".contact-info",
+          opacity: [0, 1],
+          translateX: [-40, 0],
+          duration: 700,
+        },
+        "-=350"
+      )
+      .add(
+        {
+          targets: ".contact-form > *",
+          opacity: [0, 1],
+          translateY: [22, 0],
+          duration: 550,
+          delay: anime.stagger(70),
+        },
+        "-=500"
+      );
+  }
+
   /* ---------- FAQ : accordéon animé (ouverture/fermeture) ---------- */
   const faqItems = document.querySelectorAll(".faq__item");
 
