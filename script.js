@@ -25,21 +25,6 @@
     })
   );
 
-  /* ---------- Waveforms (barres générées) ---------- */
-  document.querySelectorAll("[data-waveform]").forEach((wf) => {
-    const count = parseInt(wf.dataset.waveform, 10) || 40;
-    for (let i = 0; i < count; i++) {
-      const bar = document.createElement("span");
-      bar.className = "bar";
-      // hauteur pseudo-aléatoire mais déterministe (motif sinusoïdal + variation)
-      const base = Math.abs(Math.sin(i * 0.6)) * 60 + Math.abs(Math.sin(i * 1.7)) * 35;
-      bar.style.height = Math.max(8, base + (i % 5) * 6) + "%";
-      // quelques barres en vert, réparties
-      if (i % 7 === 3 || i % 11 === 0) bar.classList.add("is-green");
-      wf.appendChild(bar);
-    }
-  });
-
   /* ---------- FAQ : ouverture exclusive (accordéon) ---------- */
   const faqItems = document.querySelectorAll(".faq__item");
   faqItems.forEach((item) => {
