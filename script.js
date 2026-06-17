@@ -4,6 +4,11 @@
 (function () {
   "use strict";
 
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  const hasAnime = !!window.anime && !reduceMotion;
+
   /* ---------- Nav : fond au scroll ---------- */
   const nav = document.getElementById("nav");
   const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 30);
@@ -57,23 +62,69 @@
     });
   }
 
-  /* ---------- FAQ : ouverture exclusive (accordéon) ---------- */
+  /* ---------- FAQ : accordéon animé (ouverture/fermeture) ---------- */
   const faqItems = document.querySelectorAll(".faq__item");
+
+  const openFaq = (item) => {
+    const panel = item.querySelector("p");
+    const icon = item.querySelector(".faq__icon");
+    item.setAttribute("open", "");
+    if (!hasAnime || !panel) return;
+    anime.remove(panel);
+    const target = panel.scrollHeight;
+    anime({
+      targets: panel,
+      height: [0, target],
+      opacity: [0, 1],
+      marginTop: [0, 16],
+      duration: 360,
+      easing: "easeOutCubic",
+      complete: () => {
+        panel.style.height = "auto";
+      },
+    });
+    if (icon) anime({ targets: icon, rotate: [0, 45], duration: 300, easing: "easeOutCubic" });
+  };
+
+  const closeFaq = (item) => {
+    const panel = item.querySelector("p");
+    const icon = item.querySelector(".faq__icon");
+    if (!hasAnime || !panel) {
+      item.removeAttribute("open");
+      return;
+    }
+    anime.remove(panel);
+    anime({
+      targets: panel,
+      height: [panel.scrollHeight, 0],
+      opacity: [1, 0],
+      marginTop: [16, 0],
+      duration: 300,
+      easing: "easeInCubic",
+      complete: () => {
+        item.removeAttribute("open");
+        panel.style.height = "";
+        panel.style.opacity = "";
+        panel.style.marginTop = "";
+      },
+    });
+    if (icon) anime({ targets: icon, rotate: [45, 0], duration: 300, easing: "easeInCubic" });
+  };
+
   faqItems.forEach((item) => {
-    item.addEventListener("toggle", () => {
-      if (item.open) {
-        faqItems.forEach((other) => {
-          if (other !== item) other.open = false;
-        });
-      }
+    const summary = item.querySelector("summary");
+    summary.addEventListener("click", (e) => {
+      e.preventDefault(); // on pilote l'ouverture nous-mêmes (pour l'animation)
+      const isOpen = item.hasAttribute("open");
+      // ouverture exclusive : on ferme les autres
+      faqItems.forEach((other) => {
+        if (other !== item && other.hasAttribute("open")) closeFaq(other);
+      });
+      isOpen ? closeFaq(item) : openFaq(item);
     });
   });
 
   /* ---------- Révélation animée au défilement (anime.js) ---------- */
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
   // Catalogue de variantes d'animation
   const VARIANTS = {
     up: { opacity: [0, 1], translateY: [34, 0], easing: "easeOutCubic", duration: 700 },

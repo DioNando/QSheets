@@ -884,6 +884,23 @@ em {
   letter-spacing: 0.15em;
   padding: 5px 14px;
   border-radius: 20px;
+  animation: badge-pulse 2.2s ease-in-out infinite;
+}
+@keyframes badge-pulse {
+  0%,
+  100% {
+    transform: translateX(50%) scale(1);
+    box-shadow: 0 0 0 0 rgba(43, 211, 122, 0.55);
+  }
+  50% {
+    transform: translateX(50%) scale(1.07);
+    box-shadow: 0 0 0 10px rgba(43, 211, 122, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .price__badge {
+    animation: none;
+  }
 }
 .price__name {
   font-family: var(--serif);
@@ -1013,6 +1030,10 @@ em {
   font-size: 0.95rem;
   max-width: 70ch;
   margin-top: 16px;
+  overflow: hidden;
+}
+.faq__icon {
+  transition: color 0.25s ease;
 }
 .faq__item strong {
   color: var(--ink);
