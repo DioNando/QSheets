@@ -69,28 +69,115 @@
     });
   });
 
-  /* ---------- Révélation au défilement ---------- */
-  const revealTargets = document.querySelectorAll(
-    ".section__head, .compare__card, .step, .prod, .team__card, .price, .client, .faq__item"
-  );
-  if ("IntersectionObserver" in window) {
+  /* ---------- Révélation animée au défilement (anime.js) ---------- */
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  // Catalogue de variantes d'animation
+  const VARIANTS = {
+    up: { opacity: [0, 1], translateY: [34, 0], easing: "easeOutCubic", duration: 700 },
+    left: { opacity: [0, 1], translateX: [-52, 0], easing: "easeOutCubic", duration: 750 },
+    right: { opacity: [0, 1], translateX: [52, 0], easing: "easeOutCubic", duration: 750 },
+    zoom: { opacity: [0, 1], scale: [0.9, 1], easing: "easeOutBack", duration: 750 },
+    pop: { opacity: [0, 1], translateY: [40, 0], scale: [0.96, 1], easing: "easeOutBack", duration: 800 },
+  };
+
+  // Association sélecteur → variante (l'ordre n'importe pas, chaque élément ne reçoit qu'une variante)
+  const GROUPS = [
+    { sel: ".section__head", v: "up" },
+    { sel: ".compare__card--bad", v: "left" },
+    { sel: ".compare__card--good", v: "right" },
+    { sel: ".step", v: "up" },
+    { sel: ".prod", v: "zoom" },
+    { sel: ".team__card", v: "pop" },
+    { sel: ".price", v: "zoom" },
+    { sel: ".client", v: "zoom" },
+    { sel: ".faq__item", v: "left" },
+    { sel: ".philo", v: "up" },
+    { sel: ".prod-foot", v: "up" },
+    { sel: ".cta__inner", v: "up" },
+  ];
+
+  const revealTargets = [];
+  GROUPS.forEach(({ sel, v }) => {
+    document.querySelectorAll(sel).forEach((el) => {
+      if (el.dataset.variant) return; // déjà assigné par un sélecteur plus spécifique
+      el.dataset.variant = v;
+      revealTargets.push(el);
+    });
+  });
+
+  if (window.anime && "IntersectionObserver" in window && !reduceMotion) {
     revealTargets.forEach((el) => {
       el.style.opacity = "0";
-      el.style.transform = "translateY(24px)";
-      el.style.transition = "opacity .6s ease, transform .6s ease";
+      el.style.willChange = "opacity, transform";
     });
+
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "none";
-            io.unobserve(entry.target);
-          }
+        const batch = entries
+          .filter((e) => e.isIntersecting)
+          .map((e) => e.target);
+        if (!batch.length) return;
+        batch.forEach((el) => io.unobserve(el));
+
+        // on regroupe par variante pour appliquer le bon effet + cascade
+        const byVariant = {};
+        batch.forEach((el) => {
+          const v = el.dataset.variant || "up";
+          (byVariant[v] = byVariant[v] || []).push(el);
+        });
+
+        Object.keys(byVariant).forEach((v) => {
+          anime({
+            targets: byVariant[v],
+            ...VARIANTS[v],
+            delay: anime.stagger(90),
+          });
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
     );
     revealTargets.forEach((el) => io.observe(el));
+  } else {
+    revealTargets.forEach((el) => (el.style.opacity = "1"));
+  }
+
+  /* ---------- Animation d'entrée du hero (au chargement) ---------- */
+  const heroBits = document.querySelectorAll(
+    ".hero__content > *, .hero__img, .hero__logos img"
+  );
+  if (window.anime && !reduceMotion && heroBits.length) {
+    heroBits.forEach((el) => (el.style.opacity = "0"));
+    anime
+      .timeline({ easing: "easeOutCubic" })
+      .add({
+        targets: ".hero__content > *",
+        opacity: [0, 1],
+        translateY: [26, 0],
+        duration: 700,
+        delay: anime.stagger(110),
+      })
+      .add(
+        {
+          targets: ".hero__img",
+          opacity: [0, 1],
+          scale: [0.92, 1],
+          duration: 900,
+          easing: "easeOutQuad",
+        },
+        "-=600"
+      )
+      .add(
+        {
+          targets: ".hero__logos img",
+          opacity: [0, 1],
+          translateY: [16, 0],
+          duration: 600,
+          delay: anime.stagger(70),
+        },
+        "-=500"
+      );
   }
 })();
