@@ -414,19 +414,22 @@ em {
   position: relative;
   padding-top: 140px;
   padding-bottom: 60px;
+  /* position du halo (mise à jour par le JS au survol) */
+  --gx: 92%;
+  --gy: 2%;
   background:
     radial-gradient(
-      40% 35% at 92% 2%,
+      40% 35% at var(--gx) var(--gy),
       rgba(120, 240, 175, 0.55),
       transparent 60%
     ),
     radial-gradient(
-      70% 60% at 88% 8%,
+      70% 60% at calc(var(--gx) - 4%) calc(var(--gy) + 6%),
       rgba(43, 211, 122, 0.35),
       transparent 60%
     ),
     radial-gradient(
-      120% 95% at 80% 20%,
+      120% 95% at calc(var(--gx) - 12%) calc(var(--gy) + 18%),
       rgba(43, 211, 122, 0.18),
       transparent 58%
     ),
@@ -629,6 +632,15 @@ em {
 .compare__metric .icn img {
   width: 5rem;
   height: 5rem;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* survol carte « Sans » : le sablier se retourne */
+.compare__card--bad:hover .icn img {
+  transform: rotate(180deg);
+}
+/* survol carte « Avec » : le chrono glisse */
+.compare__card--good:hover .icn img {
+  transform: translateX(12px);
 }
 .compare__card--good .compare__metric .icn,
 .compare__card--good .compare__metric {

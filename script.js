@@ -262,4 +262,45 @@
         "-=500"
       );
   }
+
+  /* ---------- Hero : flottement + parallaxe souris (desktop) ---------- */
+  const heroEl = document.getElementById("hero");
+  const heroImg = document.querySelector(".hero__img");
+  const desktop = window.matchMedia("(min-width: 981px)").matches;
+
+  if (heroEl && heroImg && desktop && !reduceMotion) {
+    let tnx = 0, // cible normalisée (-0.5..0.5)
+      tny = 0,
+      nx = 0, // valeur lissée
+      ny = 0,
+      t = 0;
+
+    heroEl.addEventListener("mousemove", (e) => {
+      const r = heroEl.getBoundingClientRect();
+      tnx = (e.clientX - r.left) / r.width - 0.5;
+      tny = (e.clientY - r.top) / r.height - 0.5;
+    });
+    heroEl.addEventListener("mouseleave", () => {
+      tnx = 0;
+      tny = 0;
+    });
+
+    const tick = () => {
+      t += 0.018;
+      nx += (tnx - nx) * 0.06; // lissage du suivi souris
+      ny += (tny - ny) * 0.06;
+      const floatY = Math.sin(t) * 9; // flottement vertical continu
+      // parallaxe amplifiée de l'illustration (±42px)
+      const px = nx * 84;
+      const py = ny * 84;
+      heroImg.style.transform =
+        "translate(" + px.toFixed(2) + "px," + (py + floatY).toFixed(2) + "px)";
+      // le halo suit le curseur (décalage ±10%)
+      heroEl.style.setProperty("--gx", (92 + nx * 20).toFixed(2) + "%");
+      heroEl.style.setProperty("--gy", (2 + ny * 20).toFixed(2) + "%");
+      requestAnimationFrame(tick);
+    };
+    // on démarre après l'animation d'entrée pour ne pas se chevaucher
+    setTimeout(() => requestAnimationFrame(tick), window.anime ? 1700 : 0);
+  }
 })();
