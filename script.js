@@ -195,6 +195,37 @@
     revealTargets.forEach((el) => (el.style.opacity = "1"));
   }
 
+  /* ---------- Barre de son : égaliseur animé (SVG) ---------- */
+  const waveSvg = document.querySelector(".cta__wave");
+  if (hasAnime && waveSvg) {
+    const bars = waveSvg.querySelectorAll("path");
+    const eq = anime({
+      targets: bars,
+      scaleY: [
+        { value: () => anime.random(20, 100) / 100 },
+        { value: () => anime.random(20, 100) / 100 },
+        { value: () => anime.random(20, 100) / 100 },
+      ],
+      duration: 2000,
+      delay: anime.stagger(16, { from: "center" }),
+      direction: "alternate",
+      loop: true,
+      easing: "easeInOutSine",
+      autoplay: false,
+    });
+    // on ne joue l'animation que lorsque la barre est visible (perf)
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => (e.isIntersecting ? eq.play() : eq.pause()));
+        },
+        { threshold: 0.2 }
+      ).observe(waveSvg);
+    } else {
+      eq.play();
+    }
+  }
+
   /* ---------- Animation d'entrée du hero (au chargement) ---------- */
   const heroBits = document.querySelectorAll(
     ".hero__content > *, .hero__img, .hero__logos img"

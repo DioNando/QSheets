@@ -561,6 +561,12 @@ em {
   height: auto;
   margin-top: 60px;
 }
+/* chaque barre se met à l'échelle autour de son propre centre */
+.cta__wave path {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
 @media (min-width: 981px) {
   .cta__wave {
     transform: scale(1.2);
