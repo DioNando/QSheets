@@ -38,7 +38,7 @@
           <em>rapides</em>, sans erreur.
         </h1>
         <p class="hero__sub">
-          Pensé par les professionnels pour les professionnels. QSheets combine
+          Pensée par les professionnels pour les professionnels. QSheets combine
           automatisation et outils d'édition pour passer de l'EDL à l'export
           SACEM en quelques minutes, sans rien céder sur la rigueur.
         </p>
@@ -46,10 +46,10 @@
           <a href="#cta" class="btn btn--primary">Essayer gratuitement
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="#workflow" class="btn btn--outline">
+          <button type="button" class="btn btn--outline" data-demo aria-haspopup="dialog">
             <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
             Voir une démo
-          </a>
+          </button>
         </div>
       </div>
       <div class="hero__visual">
@@ -444,15 +444,33 @@
       </div>
       <div class="footer__col">
         <h4>LÉGAL</h4>
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-        <a href="#">CGU</a>
+        <a href="page.html">Mentions légales</a>
+        <a href="page.html">Politique de confidentialité</a>
+        <a href="page.html">CGU</a>
       </div>
     </div>
     <div class="container footer__bottom">
       <p>© 2026 QSHEETS — TOUS DROITS RÉSERVÉS.</p>
     </div>
   </footer>
+
+  <!-- ===================== LIGHTBOX DÉMO ===================== -->
+  <div class="lightbox" id="demoLightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Démo QSheets">
+      <button class="lightbox__close" type="button" data-close aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="lightbox__video">
+        <!-- ▼▼▼ REMPLACEZ la source par votre vidéo (mp4) ▼▼▼ -->
+        <video id="demoVideo" controls playsinline preload="none" poster="">
+          <source src="" type="video/mp4" />
+          Votre navigateur ne prend pas en charge la lecture vidéo.
+        </video>
+        <!-- ▲▲▲ Pour une vidéo YouTube/Vimeo : remplacez <video>…</video> par une <iframe> ▲▲▲ -->
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

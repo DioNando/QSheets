@@ -25,6 +25,38 @@
     })
   );
 
+  /* ---------- Lightbox démo (vidéo) ---------- */
+  const lightbox = document.getElementById("demoLightbox");
+  if (lightbox) {
+    const demoVideo = document.getElementById("demoVideo");
+    const openLightbox = () => {
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    const closeLightbox = () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      if (demoVideo) demoVideo.pause();
+    };
+    // déclencheurs d'ouverture
+    document.querySelectorAll("[data-demo]").forEach((btn) =>
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openLightbox();
+      })
+    );
+    // fermeture (croix + fond)
+    lightbox.querySelectorAll("[data-close]").forEach((el) =>
+      el.addEventListener("click", closeLightbox)
+    );
+    // fermeture au clavier (Échap)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
+    });
+  }
+
   /* ---------- FAQ : ouverture exclusive (accordéon) ---------- */
   const faqItems = document.querySelectorAll(".faq__item");
   faqItems.forEach((item) => {
