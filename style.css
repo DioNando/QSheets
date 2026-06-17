@@ -1644,6 +1644,10 @@ em {
 }
 
 @media (max-width: 720px) {
+  /* image du hero masquée sur mobile */
+  .hero__visual {
+    display: none;
+  }
   /* burger menu */
   .nav__toggle {
     display: flex;
@@ -1707,6 +1711,9 @@ em {
   }
   .step {
     min-height: auto;
+  }
+  .step:last-child {
+    border-right: 0;
   }
   .prod-foot,
   .philo {
