@@ -320,20 +320,66 @@
   }
 
   /* ---------- Animation d'entrée du hero (au chargement) ---------- */
+  // Découpe un élément en lettres (<span class="letter">) en préservant
+  // les sous-éléments (<em>) et les retours à la ligne (<br>).
+  const splitLetters = (root) => {
+    const letters = [];
+    const walk = (node) => {
+      Array.prototype.slice.call(node.childNodes).forEach((child) => {
+        if (child.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          child.textContent.split("").forEach((ch) => {
+            if (/\s/.test(ch)) {
+              frag.appendChild(document.createTextNode(" "));
+              return;
+            }
+            const span = document.createElement("span");
+            span.className = "letter";
+            span.textContent = ch;
+            frag.appendChild(span);
+            letters.push(span);
+          });
+          node.replaceChild(frag, child);
+        } else if (child.nodeName === "BR") {
+          /* on garde le retour à la ligne */
+        } else if (child.nodeType === 1) {
+          walk(child); // récursion dans <em>, etc.
+        }
+      });
+    };
+    walk(root);
+    return letters;
+  };
+
+  const heroTitle = document.querySelector(".hero__title");
+  const letters = heroTitle ? splitLetters(heroTitle) : [];
   const heroBits = document.querySelectorAll(
-    ".hero__content > *, .hero__img, .hero__logos img"
+    ".hero__content > *:not(.hero__title), .hero__img, .hero__logos img"
   );
-  if (window.anime && !reduceMotion && heroBits.length) {
+
+  if (window.anime && !reduceMotion && heroTitle) {
     heroBits.forEach((el) => (el.style.opacity = "0"));
+    letters.forEach((l) => (l.style.opacity = "0"));
     anime
       .timeline({ easing: "easeOutCubic" })
       .add({
-        targets: ".hero__content > *",
+        targets: letters,
         opacity: [0, 1],
-        translateY: [26, 0],
+        translateY: [-55, 0],
         duration: 700,
-        delay: anime.stagger(110),
+        easing: "easeOutBack",
+        delay: anime.stagger(26),
       })
+      .add(
+        {
+          targets: ".hero__content > *:not(.hero__title)",
+          opacity: [0, 1],
+          translateY: [26, 0],
+          duration: 700,
+          delay: anime.stagger(110),
+        },
+        "-=350"
+      )
       .add(
         {
           targets: ".hero__img",
