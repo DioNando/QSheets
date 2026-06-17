@@ -453,11 +453,20 @@ em {
 .hero__title em {
   color: var(--green);
 }
+.hero__lead {
+  color: var(--green);
+  font-size: 1.5rem;
+  max-width: 48ch;
+  margin-top: 26px;
+}
 .hero__sub {
-  margin: 26px 0 34px;
+  margin: 14px 0 34px;
   max-width: 48ch;
   color: var(--light-soft);
   font-size: 1.05rem;
+}
+.hero__sub span {
+  color: var(--light);
 }
 .hero__actions {
   display: flex;
@@ -564,10 +573,10 @@ em {
   height: auto;
   margin-top: 60px;
 }
-/* chaque barre se met à l'échelle autour de son propre centre */
+/* chaque barre se met à l'échelle depuis sa base (bas) */
 .cta__wave path {
   transform-box: fill-box;
-  transform-origin: center;
+  transform-origin: bottom;
   will-change: transform;
 }
 @media (min-width: 981px) {

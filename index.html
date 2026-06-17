@@ -1,479 +1,1066 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QSheets — La solution pour des cue sheets justes, rapides, sans erreur</title>
-  <meta name="description" content="QSheets : la solution pour des cue sheets justes, rapides, sans erreur. Pensé par les professionnels de l'audiovisuel, conforme SACEM." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      QSheets — La solution pour des cue sheets justes, rapides, sans erreur
+    </title>
+    <meta
+      name="description"
+      content="QSheets : la solution pour des cue sheets justes, rapides, sans erreur. Pensé par les professionnels de l'audiovisuel, conforme SACEM."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===================== NAV ===================== -->
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#hero" class="brand"
+          ><img src="img/logo_header.svg" alt="QSheets" class="brand__logo"
+        /></a>
+        <nav class="nav__links" id="navLinks">
+          <a href="#pourquoi">Solution</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#productions">Pour qui</a>
+          <a href="#equipe">Équipe</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#faq">FAQ</a>
+          <a href="#cta" class="btn btn--tonal nav__cta"
+            >Essayer gratuitement</a
+          >
+        </nav>
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-  <!-- ===================== NAV ===================== -->
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="#hero" class="brand"><img src="img/logo_header.svg" alt="QSheets" class="brand__logo" /></a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#pourquoi">Solution</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#productions">Pour qui</a>
-        <a href="#equipe">Équipe</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#faq">FAQ</a>
-        <a href="#cta" class="btn btn--tonal nav__cta">Essayer gratuitement</a>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero section--dark" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            la solution pour <br />des cue sheets <em>justes</em>,<br />
+            <em>rapides</em>, sans erreur.
+          </h1>
+          <p class="hero__lead">
+            Pensée par les professionnels pour les professionnels.
+          </p>
+          <p class="hero__sub">
+            <span
+              >QSheets combine automatisation et outils d'édition rapides</span
+            >
+            pour simplifier la création de cue sheets conforme SACEM - adapté à
+            tous les workflows de production audiovisuelle.
+          </p>
+          <div class="hero__actions">
+            <a href="#cta" class="btn btn--primary"
+              >Essayer gratuitement
+              <svg
+                class="ico"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <button
+              type="button"
+              class="btn btn--outline"
+              data-demo
+              aria-haspopup="dialog"
+            >
+              <svg
+                class="ico"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Voir une démo
+            </button>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img src="img/imge-hero.svg" alt="" class="hero__img" />
+        </div>
+      </div>
+    </section>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero section--dark" id="hero">
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <p class="eyebrow">la solution pour</p>
-        <h1 class="hero__title">
-          des cue sheets <em>justes</em>,<br />
-          <em>rapides</em>, sans erreur.
-        </h1>
-        <p class="hero__sub">
-          Pensée par les professionnels pour les professionnels. QSheets combine
-          automatisation et outils d'édition pour passer de l'EDL à l'export
-          SACEM en quelques minutes, sans rien céder sur la rigueur.
+    <!-- ===================== BANDE LOGOS ===================== -->
+    <section class="logos-bar section--dark">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">— Ils nous accompagnent</p>
+        <div class="hero__logos">
+          <img src="img/partenaire_1.svg" alt="Partenaire" />
+          <img src="img/partenaire_2.svg" alt="Partenaire" />
+          <img src="img/partenaire_3.svg" alt="Partenaire" />
+          <img src="img/partenaire_4.svg" alt="Partenaire" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 01 POURQUOI ===================== -->
+    <section class="section section--cream" id="pourquoi">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">Le cue sheet,<br /><em>sans la friction.</em></h2>
+          <p class="section__lead">
+            Les déclarations musicales pèsent <strong>1 à 3 heures</strong> de
+            travail par programme. QSheets réduit ça à quelques minutes, sans
+            rien céder sur la rigueur.
+          </p>
+          <span class="tag">01 / Pourquoi</span>
+        </div>
+
+        <div class="compare">
+          <div class="compare__card compare__card--bad">
+            <div class="compare__top">
+              <h3 class="compare__title">Sans <em>Qsheets</em>.</h3>
+              <p class="compare__metric">
+                1 à 3<em>h</em>
+                <span class="icn"><img src="img/sablier.svg" alt="" /></span>
+              </p>
+              <p class="compare__unit">PAR PROGRAMME</p>
+            </div>
+            <ul class="bullets">
+              <li>Saisie manuelle fastidieuse</li>
+              <li>Erreurs fréquentes</li>
+              <li>Recherches de timecodes complexes</li>
+              <li>Corrections interminables</li>
+              <li>Pertes d'informations entre équipes</li>
+              <li>Workflows fragiles, peu adaptés au terrain</li>
+            </ul>
+          </div>
+          <div class="compare__card compare__card--good">
+            <div class="compare__top">
+              <h3 class="compare__title">Avec <em>Qsheets</em>.</h3>
+              <p class="compare__metric">
+                1 à 5<em>min</em>
+                <span class="icn"
+                  ><img src="img/chronometre.svg" alt=""
+                /></span>
+              </p>
+              <p class="compare__unit">PAR PROGRAMME</p>
+            </div>
+            <ul class="bullets bullets--green">
+              <li>Import et analyse automatique des EDL</li>
+              <li>Génération des rapports de montage</li>
+              <li>Édition rapide des données musicales</li>
+              <li>Gestion des œuvres connues et inconnues</li>
+              <li>Gestion des stems et cas particuliers</li>
+              <li>Bibliothèque musicale centralisée</li>
+              <li>Calculs conformes SACEM</li>
+              <li>Export instantané des déclarations</li>
+              <li>Collaboration en équipe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 WORKFLOW ===================== -->
+    <section class="section section--dark" id="workflow">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">Un workflow<br /><em>en quatre étapes.</em></h2>
+          <p class="section__lead">
+            Aucune n'implique Excel. De l'import EDL à l'export SACEM, le chemin
+            est
+            <strong>linéaire et sans angle mort.</strong>
+          </p>
+          <span class="tag">02 / Workflow</span>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Importez<br />votre EDL</h3>
+          </article>
+          <article class="step">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Analyse<br />automatique</h3>
+            <p class="step__desc">
+              Qsheets détecte et structure les données musicales.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Vérifiez<br />et éditez</h3>
+            <p class="step__desc">
+              Correction rapide des œuvres, timecodes et répartitions.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Exportez<br />vers la SACEM</h3>
+            <p class="step__desc">Déclaration prête à être livrée.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 PRODUCTIONS ===================== -->
+    <section class="section section--cream" id="productions">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">
+            Adapté à <em>toutes</em><br />les productions.
+          </h2>
+          <p class="section__lead">
+            Que vous travailliez avec de la <em>musique originale</em> ou
+            préexistante, QSheets prend en charge tous les cas liés aux
+            déclarations : accords entre éditeurs et compositeurs, gestion des
+            stems et des packs de score, dénominations génériques des titres.
+          </p>
+          <span class="tag">03 / Pour qui</span>
+        </div>
+
+        <div class="prod-grid">
+          <div class="prod">
+            <span class="prod__num">— 01</span>
+            <h3>Fiction<br /><em>quotidienne</em></h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 02</span>
+            <h3>Séries</h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 03</span>
+            <h3>Longs<br />métrages</h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 04</span>
+            <h3>Courts<br />métrages</h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 05</span>
+            <h3>Documentaires</h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 06</span>
+            <h3>Animation</h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 07</span>
+            <h3>Magazines<br />TV</h3>
+          </div>
+          <div class="prod">
+            <span class="prod__num">— 08</span>
+            <h3 class="accent">
+              <em>Et plus<br />encore...</em>
+            </h3>
+          </div>
+        </div>
+
+        <div class="prod-foot">
+          <p>
+            QSheets détecte les
+            <strong>différentes fréquences d'images par seconde</strong> et
+            prend en charge le son mono, stéréo et multicanal. Tout a été pensé
+            pour s'adapter aux contraintes opérationnelles de la production
+            audiovisuelle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 ÉQUIPE ===================== -->
+    <section class="section section--dark" id="equipe">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">Né d'un<br /><em>besoin terrain.</em></h2>
+          <p class="section__lead">
+            QSheets a été développé par des professionnels de l'audiovisuel en
+            collaboration directe avec les acteurs clefs de la chaîne de
+            déclaration musicale.
+          </p>
+          <span class="tag">04 / L'équipe</span>
+        </div>
+
+        <div class="team">
+          <article class="team__card">
+            <span class="avatar">M</span>
+            <h3 class="team__name"><em>Mehdi</em></h3>
+            <p class="team__role">— Fondateur</p>
+            <p class="team__bio">
+              À l'origine du projet, il a réuni une équipe de professionnels de
+              l'audiovisuel et du développement logiciel pour concevoir une
+              solution pensée pour les réalités du terrain. Spécialisé dans
+              l'innovation et les technologies appliquées au secteur
+              audiovisuel, il accompagne depuis plusieurs années le
+              développement d'outils adaptés aux nouveaux workflows de
+              production pour les grands diffuseurs français et internationaux.
+            </p>
+          </article>
+          <article class="team__card">
+            <span class="avatar">A</span>
+            <h3 class="team__name"><em>Arthur</em></h3>
+            <p class="team__role">— Conception produit</p>
+            <p class="team__bio">
+              Monteur son et mixeur, Arthur travaille sur des séries, films et
+              documentaires diffusés sur TF1, France Télévisions, Canal+, M6 et
+              Netflix.
+              <br /><br />
+              En charge de la conceptualisation de QSheets, il a collaboré avec
+              les différents acteurs du secteur afin de créer un outil capable
+              de répondre aux exigences concrètes de la production audiovisuelle
+              et des déclarations musicales.
+            </p>
+          </article>
+          <article class="team__card">
+            <span class="avatar">S</span>
+            <h3 class="team__name"><em>Samuel</em></h3>
+            <p class="team__role">— Développement</p>
+            <p class="team__bio">
+              Développeur expérimenté avec plus de 20 ans d'expérience, il
+              conçoit des outils robustes et adaptés aux environnements de
+              production exigeants.
+              <br />
+              Il possède une solide connaissance du secteur audiovisuel,
+              notamment à travers son travail de création d'interfaces
+              numériques pour les tournages et les plateaux de télévision.
+            </p>
+          </article>
+        </div>
+
+        <div class="philo">
+          <h3 class="philo__title">
+            Un produit pensé <em>avec</em>,<br />pas <em>pour</em>.
+          </h3>
+          <div class="philo__body">
+            <p>
+              Le projet est né du dialogue avec ceux qui font les cue sheets au
+              quotidien, et avec ceux qui les reçoivent :
+            </p>
+            <ul class="dashed">
+              <li>Monteurs son, musique et mixeurs</li>
+              <li>Directeur de production et de post-production</li>
+              <li>Éditeurs, compositeurs et agent d'artistes</li>
+              <li>Société de répartition des droits d'auteurs · SACEM</li>
+              <li>Service juridique de production</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 TARIFS ===================== -->
+    <section class="section section--cream" id="tarifs">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">
+            Une tarification<br /><em>simple</em> et flexible.
+          </h2>
+          <p class="section__lead">
+            Pas d'abonnement obligatoire. Vous
+            <strong>payez à l'export</strong>. Les retouches et corrections de
+            cue sheets restent gratuites et illimitées.
+          </p>
+          <span class="tag">05 / Tarifs</span>
+        </div>
+
+        <div class="pricing">
+          <article class="price">
+            <h3 class="price__name">Essai gratuit</h3>
+            <p class="price__amount">0€</p>
+            <p class="price__desc">
+              Quelques tokens offerts à l'inscription pour tester la plateforme.
+            </p>
+            <ul class="checks">
+              <li>Tokens de démarrage offerts</li>
+              <li>Import EDL &amp; analyse complète</li>
+              <li>Sans engagement</li>
+            </ul>
+            <a href="#cta" class="btn btn--tonal btn--block"
+              >Créer un compte gratuit</a
+            >
+          </article>
+
+          <article class="price price--featured">
+            <span class="price__badge">LE PLUS UTILISÉ</span>
+            <h3 class="price__name">Paiement à l'export</h3>
+            <p class="price__amount">
+              0,60 € <span class="price__per">/ token</span>
+            </p>
+            <p class="price__desc">
+              minute de programme traitée = 1 token.<br />Vous ne payez qu'à
+              l'export de la cue sheet.
+            </p>
+            <ul class="checks">
+              <li>Modifications gratuites &amp; illimitées</li>
+              <li>Export SACEM instantané</li>
+              <li>Crédits partageables en équipe</li>
+              <li>Sans abonnement</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary">Commencer maintenant</a>
+          </article>
+
+          <article class="price">
+            <h3 class="price__name">Studio / Volume</h3>
+            <p class="price__amount price__amount--accent">
+              <em>Sur mesure</em>
+            </p>
+            <p class="price__desc">
+              Abonnements privés et tarifs volume pour les studios et grandes
+              productions.
+            </p>
+            <ul class="checks">
+              <li>Crédits mutualisés à l'échelle</li>
+              <li>Accompagnement dédié</li>
+              <li>Facturation centralisée</li>
+            </ul>
+            <a href="#cta" class="btn btn--tonal btn--block"
+              >Contacter l'équipe</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 CLIENTS ===================== -->
+    <section class="section section--dark" id="clients">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">Ils utilisent<br /><em>QSheets.</em></h2>
+          <p class="section__lead">
+            Des séries quotidiennes aux longs métrages, des studios indépendants
+            aux groupes diffuseurs. <strong>Le terrain a tranché.</strong>
+          </p>
+          <span class="tag">06 / Clients</span>
+        </div>
+
+        <div class="clients">
+          <div class="client">
+            <img src="img/logo_1.svg" alt="Demain nous appartient" />
+          </div>
+          <div class="client">
+            <img src="img/logo_2.svg" alt="Ici tout commence" />
+          </div>
+          <div class="client">
+            <img src="img/logo_3.svg" alt="Plus belle la vie" />
+          </div>
+          <div class="client">
+            <img src="img/logo_4.svg" alt="Studios Post & Prod" />
+          </div>
+          <div class="client">
+            <img src="img/logo_5.svg" alt="Kaptain Music" />
+          </div>
+          <div class="client"><img src="img/logo_6.svg" alt="TF1" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 FAQ ===================== -->
+    <section class="section section--cream" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="display">Questions<br /><em>fréquentes</em></h2>
+          <span class="tag">07 / FAQ</span>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary>
+              Quels formats EDL sont compatibles ?<span class="faq__icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" /></svg
+              ></span>
+            </summary>
+            <p>
+              QSheets est compatible avec les EDL exportés depuis
+              <strong>Pro Tools</strong>. Il suffit de configurer l'export selon
+              notre protocole, un tutoriel vidéo est disponible ici pour vous
+              guider étape par étape.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              Les cue sheets sont-elles conformes SACEM ?<span class="faq__icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" /></svg
+              ></span>
+            </summary>
+            <p>
+              Oui. Les exports générés par QSheets
+              <strong>remplissent automatiquement</strong> les champs de la
+              matrice officielle de la SACEM, avec une gestion précise des
+              durées, des répartitions, des cas particuliers de superpositions
+              et des informations liées aux œuvres musicales.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              Peut-on travailler en équipe ?<span class="faq__icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" /></svg
+              ></span>
+            </summary>
+            <p>
+              Oui. QSheets permet le <strong>travail collaboratif</strong> entre
+              plusieurs utilisateurs. Les projets et les crédits peuvent être
+              partagés afin de faciliter les échanges entre production,
+              supervision musicale, montage et post-production.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              Comment fonctionnent les tokens ?<span class="faq__icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" /></svg
+              ></span>
+            </summary>
+            <p>
+              Le fonctionnement est simple :
+              <strong>1 minute de programme traitée = 1 token</strong>. Des
+              tokens sont offerts à la création du compte pour tester la
+              plateforme. Vous pouvez ensuite acheter des crédits selon vos
+              besoins, sans engagement. Les retouches et corrections de cue
+              sheets restent gratuites et illimitées.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              Peut-on gérer des œuvres originales et préexistantes ?<span
+                class="faq__icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" /></svg
+              ></span>
+            </summary>
+            <p>
+              Oui. QSheets a été pensé pour gérer aussi bien les
+              <strong>œuvres originales</strong> que les
+              <strong>musiques préexistantes</strong>, y compris les cas
+              complexes liés aux ayants droit, éditeurs, compositeurs, stems ou
+              dénominations génériques. Vous pouvez importer votre catalogue,
+              celui d'un tiers, ou en constituer un sur la durée au fur et à
+              mesure de vos déclarations.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              Les données sont-elles sécurisées ?<span class="faq__icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" /></svg
+              ></span>
+            </summary>
+            <p>
+              Oui. Les données traitées sur QSheets sont
+              <strong>hébergées et protégées</strong> avec une attention
+              particulière portée à la confidentialité des productions et des
+              informations musicales.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section section--dark cta" id="cta">
+      <div class="container cta__inner">
+        <p class="eyebrow eyebrow--center">— Prêt à essayer</p>
+        <h2 class="cta__title">
+          Votre prochaine cue sheet,<br /><em>sans douleur.</em>
+        </h2>
+        <p class="cta__sub">
+          Quelques tokens offerts. Pas de carte bancaire. Pas d'engagement.
+          Juste un export propre, au format que la SACEM attend.
         </p>
-        <div class="hero__actions">
-          <a href="#cta" class="btn btn--primary">Essayer gratuitement
-            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        <div class="cta__actions">
+          <a href="#" class="btn btn--primary"
+            >Créer un compte gratuit
+            <svg
+              class="ico"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
           </a>
-          <button type="button" class="btn btn--outline" data-demo aria-haspopup="dialog">
-            <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            Voir une démo
-          </button>
+          <a href="#" class="btn btn--tonal">Contacter l'équipe</a>
         </div>
+        <!-- barre de son inline (animée via anime.js) -->
+        <svg
+          class="cta__wave"
+          aria-hidden="true"
+          id="Calque_1"
+          data-name="Calque 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 987 70"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #9fb5a8;
+              }
+              .cls-2 {
+                fill: #2bd37a;
+              }
+            </style>
+          </defs>
+          <path
+            class="cls-1"
+            d="M0,61.77V13.91a1.58,1.58,0,0,1,.48-1.15A1.54,1.54,0,0,1,1,12.41a1.68,1.68,0,0,1,.62-.13H5.68a1.69,1.69,0,0,1,1.15.48,1.62,1.62,0,0,1,.47,1.15V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H1.62A1.68,1.68,0,0,1,1,63.27a1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53A1.63,1.63,0,0,1,0,61.77"
+          />
+          <path
+            class="cls-1"
+            d="M12.17,61.77V9.85a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H13.79a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M25.15,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.88,1.88,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H26.77a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M37.32,61.77V27.7a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12H43a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.75,1.75,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53A1.69,1.69,0,0,1,43,63.4H38.94a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M49.49,61.77V22.83a1.67,1.67,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H51.11A1.69,1.69,0,0,1,50,62.92a1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M61.66,61.77V22a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.61,1.61,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H63.28a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M74.64,61.77V20.4a1.62,1.62,0,0,1,.47-1.15,1.69,1.69,0,0,1,1.15-.48h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.58,1.58,0,0,1,.48,1.15V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H76.26a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M86.81,61.77V8.23a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.64,1.64,0,0,1,.62-.13h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.44,1.44,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.44,1.44,0,0,1-.35.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H88.43a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M99,61.77V48a1.63,1.63,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H100.6a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M112,61.77V24.45a1.67,1.67,0,0,1,.12-.62,1.54,1.54,0,0,1,.35-.52A1.61,1.61,0,0,1,113,23a1.63,1.63,0,0,1,.62-.12h4.06a1.54,1.54,0,0,1,1.14.48,1.54,1.54,0,0,1,.35.52,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M124.13,61.77v-13a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.05a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.5,1.5,0,0,1,.13.62v13a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M136.29,61.77V41.49a1.64,1.64,0,0,1,.13-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12H142a1.62,1.62,0,0,1,1.15.47,1.69,1.69,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-2"
+            d="M148.46,61.77V24.45a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,1.15-.48H155a1.54,1.54,0,0,1,1.15.48,1.54,1.54,0,0,1,.35.52,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.86a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M161.44,61.77V30.13a1.69,1.69,0,0,1,.48-1.15,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.05a1.59,1.59,0,0,1,.62.12,1.75,1.75,0,0,1,.53.35,1.69,1.69,0,0,1,.48,1.15V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M173.61,61.77v-26a1.69,1.69,0,0,1,.48-1.15,1.62,1.62,0,0,1,1.15-.47h4a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.53.35,1.69,1.69,0,0,1,.48,1.15v26a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M185.78,61.77V50.41a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.64,1.64,0,0,1,.52-.35,1.51,1.51,0,0,1,.63-.13h4.86a1.44,1.44,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.86a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-2"
+            d="M198.76,61.77V33.38a1.47,1.47,0,0,1,.13-.62,1.61,1.61,0,0,1,1.5-1h4.05a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M210.93,61.77V13.91a1.44,1.44,0,0,1,.13-.62,1.58,1.58,0,0,1,.35-.53,1.64,1.64,0,0,1,.52-.35,1.69,1.69,0,0,1,.63-.13h4.05a1.64,1.64,0,0,1,.62.13,1.61,1.61,0,0,1,1,1.5V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M223.1,61.77V39.87a1.69,1.69,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.68,1.68,0,0,1,.62-.13h4.06a1.64,1.64,0,0,1,.62.13,1.61,1.61,0,0,1,1,1.5v21.9a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.44,1.44,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-2"
+            d="M235.27,61.77V43.11a1.67,1.67,0,0,1,.12-.62,1.77,1.77,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.87a1.63,1.63,0,0,1,.62.12,1.61,1.61,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.87a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M248.25,61.77V9a1.63,1.63,0,0,1,.12-.62,1.61,1.61,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M260.42,61.77V24.45a1.67,1.67,0,0,1,.12-.62,1.77,1.77,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H262a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M272.59,61.77V41.49a1.63,1.63,0,0,1,.12-.62,1.72,1.72,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M284.76,61.77V52.85a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.58,1.58,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62v8.92a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.87a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M297.74,61.77V36.62a1.67,1.67,0,0,1,.12-.62,1.7,1.7,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M309.91,61.77V13.91a1.62,1.62,0,0,1,.47-1.15,1.69,1.69,0,0,1,1.15-.48h4.06a1.69,1.69,0,0,1,1.15.48,1.75,1.75,0,0,1,.35.53,1.59,1.59,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M322.08,61.77V32.57a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.69,1.69,0,0,1,.53-.35,1.5,1.5,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.69,1.69,0,0,1,.53.35,1.83,1.83,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63v29.2a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H323.7a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M335.06,61.77V10.66a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.88,1.88,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.7,1.7,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M347.23,61.77V40.68a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.61,1.61,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M359.4,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.61,1.61,0,0,1,.87.88,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.44,1.44,0,0,1-.35.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H361a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M371.57,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M384.55,61.77V9a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M396.72,61.77V26.08a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.05a1.51,1.51,0,0,1,.63.13,1.63,1.63,0,0,1,.87.87,1.51,1.51,0,0,1,.13.63V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M408.88,61.77V26.08a1.69,1.69,0,0,1,.13-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.63,1.63,0,0,1,.87.87,1.51,1.51,0,0,1,.13.63V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M421.87,61.77V47.17a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.05a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62v14.6a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M434,61.77V55.28a1.69,1.69,0,0,1,.48-1.15,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4a1.59,1.59,0,0,1,.62.12,1.75,1.75,0,0,1,.53.35,1.69,1.69,0,0,1,.48,1.15v6.49a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M446.2,61.77V34.19a1.47,1.47,0,0,1,.13-.62,1.61,1.61,0,0,1,1.5-1h4.05a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.64,1.64,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M458.37,61.77V43.11a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.54,1.54,0,0,1,1.15-.48h4.86A1.58,1.58,0,0,1,466,42a1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13H460a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M471.35,61.77V53.66a1.47,1.47,0,0,1,.13-.62,1.58,1.58,0,0,1,.35-.53,1.64,1.64,0,0,1,.52-.35A1.68,1.68,0,0,1,473,52h4a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62v8.11a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M483.52,61.77V37.43a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.54,1.54,0,0,1,1.15-.48h4.05a1.63,1.63,0,0,1,.62.12,1.61,1.61,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M495.69,61.77V28.51a1.47,1.47,0,0,1,.13-.62,1.44,1.44,0,0,1,.35-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.87a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.44,1.44,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M508.67,61.77V51.23a1.51,1.51,0,0,1,.13-.63,1.64,1.64,0,0,1,.35-.52,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M520.84,61.77V19.59a1.54,1.54,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35A1.64,1.64,0,0,1,528,19a1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M533,61.77v-26a1.67,1.67,0,0,1,.12-.62,1.72,1.72,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.67,1.67,0,0,1,.12.62v26a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M545.18,61.77V34.19a1.63,1.63,0,0,1,.12-.62,1.75,1.75,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.68,1.68,0,0,1-.62.13H546.8a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M558.16,61.77V13.1a1.54,1.54,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.5,1.5,0,0,1,.62.13A1.69,1.69,0,0,1,565,12a1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M570.33,61.77V49.6a1.67,1.67,0,0,1,.12-.62,1.7,1.7,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36A1.67,1.67,0,0,1,572,48H576a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H572a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M582.5,61.77V33.38a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12H589a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.58,1.58,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.87a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M595.48,61.77V49.6a1.67,1.67,0,0,1,.12-.62,1.54,1.54,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.7,1.7,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H597.1a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M607.65,61.77V52a1.62,1.62,0,0,1,.47-1.15,1.69,1.69,0,0,1,1.15-.48h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35A1.58,1.58,0,0,1,615,52v9.73a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M619.82,61.77V32.57a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.06a1.5,1.5,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.54,1.54,0,0,1,.48,1.15v29.2a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M632,61.77V17.15a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.7,1.7,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M645,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M657.14,61.77V16.34a1.63,1.63,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.64,1.64,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M669.31,61.77v-17a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13H675a1.51,1.51,0,0,1,.63.13,1.63,1.63,0,0,1,.87.87,1.51,1.51,0,0,1,.13.63v17a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M681.47,61.77V11.47a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.61,1.61,0,0,1,.53-.36,1.63,1.63,0,0,1,.62-.12H688a1.54,1.54,0,0,1,1.14.48,1.54,1.54,0,0,1,.35.52,1.5,1.5,0,0,1,.13.62v50.3a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H683.1a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-2"
+            d="M694.46,61.77V17.15a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4a1.68,1.68,0,0,1,.63.12,1.83,1.83,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M706.62,61.77V18a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,1.15-.48h4a1.58,1.58,0,0,1,1.15.48,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M718.79,61.77v-30a1.51,1.51,0,0,1,.13-.63,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.44,1.44,0,0,1,.62-.13h4.86a1.44,1.44,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.51,1.51,0,0,1,.13.63v30a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.86a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M731.77,61.77V18a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,1.15-.48h4.05a1.58,1.58,0,0,1,1.15.48,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13H733.4a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M743.94,61.77v-43a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.64,1.64,0,0,1,.52-.35,1.51,1.51,0,0,1,.63-.13h4a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62v43a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M756.11,61.77V26.08a1.51,1.51,0,0,1,.13-.63,1.64,1.64,0,0,1,.35-.52,1.54,1.54,0,0,1,.52-.35,1.51,1.51,0,0,1,.63-.13h4a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.69,1.69,0,0,1-.63-.13,1.54,1.54,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M768.28,61.77V51.23a1.51,1.51,0,0,1,.13-.63,1.49,1.49,0,0,1,.35-.52,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.87a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13H769.9a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.44,1.44,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-2"
+            d="M781.26,61.77v-30a1.51,1.51,0,0,1,.13-.63,1.63,1.63,0,0,1,.87-.87,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63v30a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"
+          />
+          <path
+            class="cls-1"
+            d="M793.43,61.77V25.26a1.54,1.54,0,0,1,.48-1.14,1.41,1.41,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.44,1.44,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M805.6,61.77V53.66a1.63,1.63,0,0,1,.12-.62,1.61,1.61,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62v8.11a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.87a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M818.58,61.77V39.06a1.58,1.58,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.61,1.61,0,0,1,1,1.5V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13H820.2a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M830.75,61.77V15.53a1.63,1.63,0,0,1,.12-.62,1.61,1.61,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.58,1.58,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M842.92,61.77V55.28a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.88,1.88,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.88,1.88,0,0,1,.53.35,1.69,1.69,0,0,1,.35.53,1.67,1.67,0,0,1,.12.62v6.49a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M855.09,61.77V25.26a1.67,1.67,0,0,1,.12-.62,1.64,1.64,0,0,1,.35-.52,1.53,1.53,0,0,1,.53-.35,1.5,1.5,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.53,1.53,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.87a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-2"
+            d="M868.07,61.77V26.89a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,1.15-.48h4.06a1.69,1.69,0,0,1,1.15.48,1.75,1.75,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M880.24,61.77V42.3a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.88,1.88,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.7,1.7,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M892.41,61.77V22a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.61,1.61,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H894a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M905.39,61.77V43.92a1.67,1.67,0,0,1,.12-.62,1.54,1.54,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.77,1.77,0,0,1,.88.88,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H907a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M917.56,61.77V45.55a1.6,1.6,0,0,1,1-1.5,1.64,1.64,0,0,1,.62-.13h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.58,1.58,0,0,1,.48,1.15V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M929.73,61.77V14.72a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M941.9,61.77V51.23a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.64,1.64,0,0,1,.35.52,1.51,1.51,0,0,1,.13.63V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M954.88,61.77v-13a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.5,1.5,0,0,1,.13.62v13a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M967.05,61.77V35a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.05a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"
+          />
+          <path
+            class="cls-1"
+            d="M979.21,61.77v-30a1.69,1.69,0,0,1,.13-.63,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.44,1.44,0,0,1,.62-.13h4.86a1.51,1.51,0,0,1,.63.13,1.64,1.64,0,0,1,.52.35,1.54,1.54,0,0,1,.35.52,1.51,1.51,0,0,1,.13.63v30a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.86a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"
+          />
+        </svg>
       </div>
-      <div class="hero__visual">
-        <img src="img/imge-hero.svg" alt="" class="hero__img" />
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== BANDE LOGOS ===================== -->
-  <section class="logos-bar section--dark">
-    <div class="container">
-      <p class="eyebrow eyebrow--center">— Ils nous accompagnent</p>
-      <div class="hero__logos">
-        <img src="img/partenaire_1.svg" alt="Partenaire" />
-        <img src="img/partenaire_2.svg" alt="Partenaire" />
-        <img src="img/partenaire_3.svg" alt="Partenaire" />
-        <img src="img/partenaire_4.svg" alt="Partenaire" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 01 POURQUOI ===================== -->
-  <section class="section section--cream" id="pourquoi">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Le cue sheet,<br /><em>sans la friction.</em></h2>
-        <p class="section__lead">
-          Les déclarations musicales pèsent <strong>1 à 3 heures</strong> de travail
-          par programme. QSheets réduit ça à quelques minutes, sans rien céder sur
-          la rigueur.
-        </p>
-        <span class="tag">01 / Pourquoi</span>
-      </div>
-
-      <div class="compare">
-        <div class="compare__card compare__card--bad">
-          <div class="compare__top">
-            <h3 class="compare__title">Sans <em>Qsheets</em>.</h3>
-            <p class="compare__metric">1 à 3<em>h</em>
-              <span class="icn"><img src="img/sablier.svg" alt="" /></span>
-            </p>
-            <p class="compare__unit">PAR PROGRAMME</p>
-          </div>
-          <ul class="bullets">
-            <li>Saisie manuelle fastidieuse</li>
-            <li>Erreurs fréquentes</li>
-            <li>Recherches de timecodes complexes</li>
-            <li>Corrections interminables</li>
-            <li>Pertes d'informations entre équipes</li>
-            <li>Workflows fragiles, peu adaptés au terrain</li>
-          </ul>
-        </div>
-        <div class="compare__card compare__card--good">
-          <div class="compare__top">
-            <h3 class="compare__title">Avec <em>Qsheets</em>.</h3>
-            <p class="compare__metric">1 à 5<em>min</em>
-              <span class="icn"><img src="img/chronometre.svg" alt="" /></span>
-            </p>
-            <p class="compare__unit">PAR PROGRAMME</p>
-          </div>
-          <ul class="bullets bullets--green">
-            <li>Import et analyse automatique des EDL</li>
-            <li>Génération des rapports de montage</li>
-            <li>Édition rapide des données musicales</li>
-            <li>Gestion des œuvres connues et inconnues</li>
-            <li>Gestion des stems et cas particuliers</li>
-            <li>Bibliothèque musicale centralisée</li>
-            <li>Calculs conformes SACEM</li>
-            <li>Export instantané des déclarations</li>
-            <li>Collaboration en équipe</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 02 WORKFLOW ===================== -->
-  <section class="section section--dark" id="workflow">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Un workflow<br /><em>en quatre étapes.</em></h2>
-        <p class="section__lead">
-          Aucune n'implique Excel. De l'import EDL à l'export SACEM, le chemin est
-          <strong>linéaire et sans angle mort.</strong>
-        </p>
-        <span class="tag">02 / Workflow</span>
-      </div>
-
-      <div class="steps">
-        <article class="step">
-          <span class="step__num">01</span>
-          <h3 class="step__title">Importez<br />votre EDL</h3>
-        </article>
-        <article class="step">
-          <span class="step__num">02</span>
-          <h3 class="step__title">Analyse<br />automatique</h3>
-          <p class="step__desc">Qsheets détecte et structure les données musicales.</p>
-        </article>
-        <article class="step">
-          <span class="step__num">03</span>
-          <h3 class="step__title">Vérifiez<br />et éditez</h3>
-          <p class="step__desc">Correction rapide des œuvres, timecodes et répartitions.</p>
-        </article>
-        <article class="step">
-          <span class="step__num">04</span>
-          <h3 class="step__title">Exportez<br />vers la SACEM</h3>
-          <p class="step__desc">Déclaration prête à être livrée.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 03 PRODUCTIONS ===================== -->
-  <section class="section section--cream" id="productions">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Adapté à <em>toutes</em><br />les productions.</h2>
-        <p class="section__lead">
-          Que vous travailliez avec de la <em>musique originale</em> ou préexistante,
-          QSheets prend en charge tous les cas liés aux déclarations : accords entre
-          éditeurs et compositeurs, gestion des stems et des packs de score,
-          dénominations génériques des titres.
-        </p>
-        <span class="tag">03 / Pour qui</span>
-      </div>
-
-      <div class="prod-grid">
-        <div class="prod"><span class="prod__num">— 01</span><h3>Fiction<br /><em>quotidienne</em></h3></div>
-        <div class="prod"><span class="prod__num">— 02</span><h3>Séries</h3></div>
-        <div class="prod"><span class="prod__num">— 03</span><h3>Longs<br />métrages</h3></div>
-        <div class="prod"><span class="prod__num">— 04</span><h3>Courts<br />métrages</h3></div>
-        <div class="prod"><span class="prod__num">— 05</span><h3>Documentaires</h3></div>
-        <div class="prod"><span class="prod__num">— 06</span><h3>Animation</h3></div>
-        <div class="prod"><span class="prod__num">— 07</span><h3>Magazines<br />TV</h3></div>
-        <div class="prod"><span class="prod__num">— 08</span><h3 class="accent"><em>Et plus<br />encore...</em></h3></div>
-      </div>
-
-      <div class="prod-foot">
-        <p>QSheets détecte les <strong>différentes fréquences d'images par seconde</strong>
-          et prend en charge le son mono, stéréo et multicanal. Tout a été pensé pour
-          s'adapter aux contraintes opérationnelles de la production audiovisuelle.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 04 ÉQUIPE ===================== -->
-  <section class="section section--dark" id="equipe">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Né d'un<br /><em>besoin terrain.</em></h2>
-        <p class="section__lead">
-          QSheets a été développé par des professionnels de l'audiovisuel en
-          collaboration directe avec les acteurs clefs de la chaîne de déclaration
-          musicale.
-        </p>
-        <span class="tag">04 / L'équipe</span>
-      </div>
-
-      <div class="team">
-        <article class="team__card">
-          <span class="avatar">M</span>
-          <h3 class="team__name"><em>Mehdi</em></h3>
-          <p class="team__role">— Fondateur</p>
-          <p class="team__bio">
-            À l'origine du projet, il a réuni une équipe de professionnels de
-            l'audiovisuel et du développement logiciel pour concevoir une solution
-            pensée pour les réalités du terrain. Spécialisé dans l'innovation et les
-            technologies appliquées au secteur audiovisuel, il accompagne depuis
-            plusieurs années le développement d'outils adaptés aux nouveaux workflows
-            de production pour les grands diffuseurs français et internationaux.
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer section--dark">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#hero" class="brand brand--footer"
+            ><img
+              src="img/logo_footer.svg"
+              alt="QSheets"
+              class="brand__logo brand__logo--footer"
+          /></a>
+          <p>
+            La solution pour des cue sheets justes, rapides et sans erreur. Pour
+            les studios, les boîtes de prod, les compositeurs et tous ceux qui
+            en ont assez d'Excel à minuit.
           </p>
-        </article>
-        <article class="team__card">
-          <span class="avatar">A</span>
-          <h3 class="team__name"><em>Arthur</em></h3>
-          <p class="team__role">— Conception produit</p>
-          <p class="team__bio">
-            Monteur son et mixeur, Arthur travaille sur des séries, films et
-            documentaires diffusés sur TF1, France Télévisions, Canal+, M6 et Netflix.
-            <br /><br />
-            En charge de la conceptualisation de QSheets, il a collaboré avec les
-            différents acteurs du secteur afin de créer un outil capable de répondre
-            aux exigences concrètes de la production audiovisuelle et des déclarations
-            musicales.
-          </p>
-        </article>
-        <article class="team__card">
-          <span class="avatar">S</span>
-          <h3 class="team__name"><em>Samuel</em></h3>
-          <p class="team__role">— Développement</p>
-          <p class="team__bio">
-            Développeur expérimenté avec plus de 20 ans d'expérience, il conçoit des
-            outils robustes et adaptés aux environnements de production exigeants.
-            <br />
-            Il possède une solide connaissance du secteur audiovisuel, notamment à
-            travers son travail de création d'interfaces numériques pour les tournages
-            et les plateaux de télévision.
-          </p>
-        </article>
+        </div>
+        <div class="footer__col">
+          <h4>PRODUIT</h4>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#productions">Pour qui</a>
+          <a href="#faq">Centre d'aide</a>
+        </div>
+        <div class="footer__col">
+          <h4>SOCIÉTÉ</h4>
+          <a href="#equipe">L'équipe</a>
+          <a href="#cta">Contact</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Email</a>
+        </div>
+        <div class="footer__col">
+          <h4>LÉGAL</h4>
+          <a href="page.html">Mentions légales</a>
+          <a href="page.html">Politique de confidentialité</a>
+          <a href="page.html">CGU</a>
+        </div>
       </div>
+      <div class="container footer__bottom">
+        <p>© 2026 QSHEETS — TOUS DROITS RÉSERVÉS.</p>
+      </div>
+    </footer>
 
-      <div class="philo">
-        <h3 class="philo__title">Un produit pensé <em>avec</em>,<br />pas <em>pour</em>.</h3>
-        <div class="philo__body">
-          <p>Le projet est né du dialogue avec ceux qui font les cue sheets au
-            quotidien, et avec ceux qui les reçoivent :</p>
-          <ul class="dashed">
-            <li>Monteurs son, musique et mixeurs</li>
-            <li>Directeur de production et de post-production</li>
-            <li>Éditeurs, compositeurs et agent d'artistes</li>
-            <li>Société de répartition des droits d'auteurs · SACEM</li>
-            <li>Service juridique de production</li>
-          </ul>
+    <!-- ===================== LIGHTBOX DÉMO ===================== -->
+    <div class="lightbox" id="demoLightbox" aria-hidden="true">
+      <div class="lightbox__backdrop" data-close></div>
+      <div
+        class="lightbox__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Démo QSheets"
+      >
+        <button
+          class="lightbox__close"
+          type="button"
+          data-close
+          aria-label="Fermer"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+        <div class="lightbox__video">
+          <!-- ▼▼▼ REMPLACEZ la source par votre vidéo (mp4) ▼▼▼ -->
+          <video id="demoVideo" controls playsinline preload="none" poster="">
+            <source src="" type="video/mp4" />
+            Votre navigateur ne prend pas en charge la lecture vidéo.
+          </video>
+          <!-- ▲▲▲ Pour une vidéo YouTube/Vimeo : remplacez <video>…</video> par une <iframe> ▲▲▲ -->
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===================== 05 TARIFS ===================== -->
-  <section class="section section--cream" id="tarifs">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Une tarification<br /><em>simple</em> et flexible.</h2>
-        <p class="section__lead">
-          Pas d'abonnement obligatoire. Vous <strong>payez à l'export</strong>. Les
-          retouches et corrections de cue sheets restent gratuites et illimitées.
-        </p>
-        <span class="tag">05 / Tarifs</span>
-      </div>
-
-      <div class="pricing">
-        <article class="price">
-          <h3 class="price__name">Essai gratuit</h3>
-          <p class="price__amount">0€</p>
-          <p class="price__desc">Quelques tokens offerts à l'inscription pour tester la plateforme.</p>
-          <ul class="checks">
-            <li>Tokens de démarrage offerts</li>
-            <li>Import EDL &amp; analyse complète</li>
-            <li>Sans engagement</li>
-          </ul>
-          <a href="#cta" class="btn btn--tonal btn--block">Créer un compte gratuit</a>
-        </article>
-
-        <article class="price price--featured">
-          <span class="price__badge">LE PLUS UTILISÉ</span>
-          <h3 class="price__name">Paiement à l'export</h3>
-          <p class="price__amount">0,60 € <span class="price__per">/ token</span></p>
-          <p class="price__desc">minute de programme traitée = 1 token.<br />Vous ne payez qu'à l'export de la cue sheet.</p>
-          <ul class="checks">
-            <li>Modifications gratuites &amp; illimitées</li>
-            <li>Export SACEM instantané</li>
-            <li>Crédits partageables en équipe</li>
-            <li>Sans abonnement</li>
-          </ul>
-          <a href="#cta" class="btn btn--primary">Commencer maintenant</a>
-        </article>
-
-        <article class="price">
-          <h3 class="price__name">Studio / Volume</h3>
-          <p class="price__amount price__amount--accent"><em>Sur mesure</em></p>
-          <p class="price__desc">Abonnements privés et tarifs volume pour les studios et grandes productions.</p>
-          <ul class="checks">
-            <li>Crédits mutualisés à l'échelle</li>
-            <li>Accompagnement dédié</li>
-            <li>Facturation centralisée</li>
-          </ul>
-          <a href="#cta" class="btn btn--tonal btn--block">Contacter l'équipe</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 06 CLIENTS ===================== -->
-  <section class="section section--dark" id="clients">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Ils utilisent<br /><em>QSheets.</em></h2>
-        <p class="section__lead">
-          Des séries quotidiennes aux longs métrages, des studios indépendants aux
-          groupes diffuseurs. <strong>Le terrain a tranché.</strong>
-        </p>
-        <span class="tag">06 / Clients</span>
-      </div>
-
-      <div class="clients">
-        <div class="client"><img src="img/logo_1.svg" alt="Demain nous appartient" /></div>
-        <div class="client"><img src="img/logo_2.svg" alt="Ici tout commence" /></div>
-        <div class="client"><img src="img/logo_3.svg" alt="Plus belle la vie" /></div>
-        <div class="client"><img src="img/logo_4.svg" alt="Studios Post & Prod" /></div>
-        <div class="client"><img src="img/logo_5.svg" alt="Kaptain Music" /></div>
-        <div class="client"><img src="img/logo_6.svg" alt="TF1" /></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 07 FAQ ===================== -->
-  <section class="section section--cream" id="faq">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="display">Questions<br /><em>fréquentes</em></h2>
-        <span class="tag">07 / FAQ</span>
-      </div>
-
-      <div class="faq">
-        <details class="faq__item">
-          <summary>Quels formats EDL sont compatibles ?<span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <p>QSheets est compatible avec les EDL exportés depuis <strong>Pro Tools</strong>.
-            Il suffit de configurer l'export selon notre protocole, un tutoriel vidéo est
-            disponible ici pour vous guider étape par étape.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Les cue sheets sont-elles conformes SACEM ?<span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <p>Oui. Les exports générés par QSheets <strong>remplissent automatiquement</strong>
-            les champs de la matrice officielle de la SACEM, avec une gestion précise des
-            durées, des répartitions, des cas particuliers de superpositions et des
-            informations liées aux œuvres musicales.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Peut-on travailler en équipe ?<span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <p>Oui. QSheets permet le <strong>travail collaboratif</strong> entre plusieurs
-            utilisateurs. Les projets et les crédits peuvent être partagés afin de faciliter
-            les échanges entre production, supervision musicale, montage et post-production.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Comment fonctionnent les tokens ?<span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <p>Le fonctionnement est simple : <strong>1 minute de programme traitée = 1 token</strong>.
-            Des tokens sont offerts à la création du compte pour tester la plateforme. Vous
-            pouvez ensuite acheter des crédits selon vos besoins, sans engagement. Les retouches
-            et corrections de cue sheets restent gratuites et illimitées.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Peut-on gérer des œuvres originales et préexistantes ?<span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <p>Oui. QSheets a été pensé pour gérer aussi bien les <strong>œuvres originales</strong>
-            que les <strong>musiques préexistantes</strong>, y compris les cas complexes liés aux
-            ayants droit, éditeurs, compositeurs, stems ou dénominations génériques. Vous pouvez
-            importer votre catalogue, celui d'un tiers, ou en constituer un sur la durée au fur
-            et à mesure de vos déclarations.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Les données sont-elles sécurisées ?<span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <p>Oui. Les données traitées sur QSheets sont <strong>hébergées et protégées</strong>
-            avec une attention particulière portée à la confidentialité des productions et des
-            informations musicales.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CTA ===================== -->
-  <section class="section section--dark cta" id="cta">
-    <div class="container cta__inner">
-      <p class="eyebrow eyebrow--center">— Prêt à essayer</p>
-      <h2 class="cta__title">
-        Votre prochaine cue sheet,<br /><em>sans douleur.</em>
-      </h2>
-      <p class="cta__sub">
-        Quelques tokens offerts. Pas de carte bancaire. Pas d'engagement. Juste un
-        export propre, au format que la SACEM attend.
-      </p>
-      <div class="cta__actions">
-        <a href="#" class="btn btn--primary">Créer un compte gratuit
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#" class="btn btn--tonal">Contacter l'équipe</a>
-      </div>
-      <!-- barre de son inline (animée via anime.js) -->
-      <svg class="cta__wave" aria-hidden="true" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 987 70"><defs><style>.cls-1{fill:#9fb5a8;}.cls-2{fill:#2bd37a;}</style></defs><path class="cls-1" d="M0,61.77V13.91a1.58,1.58,0,0,1,.48-1.15A1.54,1.54,0,0,1,1,12.41a1.68,1.68,0,0,1,.62-.13H5.68a1.69,1.69,0,0,1,1.15.48,1.62,1.62,0,0,1,.47,1.15V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H1.62A1.68,1.68,0,0,1,1,63.27a1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53A1.63,1.63,0,0,1,0,61.77"/><path class="cls-1" d="M12.17,61.77V9.85a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H13.79a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M25.15,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.88,1.88,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H26.77a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M37.32,61.77V27.7a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12H43a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.75,1.75,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53A1.69,1.69,0,0,1,43,63.4H38.94a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M49.49,61.77V22.83a1.67,1.67,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H51.11A1.69,1.69,0,0,1,50,62.92a1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M61.66,61.77V22a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.61,1.61,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H63.28a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M74.64,61.77V20.4a1.62,1.62,0,0,1,.47-1.15,1.69,1.69,0,0,1,1.15-.48h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.58,1.58,0,0,1,.48,1.15V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H76.26a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M86.81,61.77V8.23a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.64,1.64,0,0,1,.62-.13h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.44,1.44,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.44,1.44,0,0,1-.35.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H88.43a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M99,61.77V48a1.63,1.63,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H100.6a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M112,61.77V24.45a1.67,1.67,0,0,1,.12-.62,1.54,1.54,0,0,1,.35-.52A1.61,1.61,0,0,1,113,23a1.63,1.63,0,0,1,.62-.12h4.06a1.54,1.54,0,0,1,1.14.48,1.54,1.54,0,0,1,.35.52,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M124.13,61.77v-13a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.05a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.5,1.5,0,0,1,.13.62v13a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M136.29,61.77V41.49a1.64,1.64,0,0,1,.13-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12H142a1.62,1.62,0,0,1,1.15.47,1.69,1.69,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-2" d="M148.46,61.77V24.45a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,1.15-.48H155a1.54,1.54,0,0,1,1.15.48,1.54,1.54,0,0,1,.35.52,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.86a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M161.44,61.77V30.13a1.69,1.69,0,0,1,.48-1.15,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.05a1.59,1.59,0,0,1,.62.12,1.75,1.75,0,0,1,.53.35,1.69,1.69,0,0,1,.48,1.15V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M173.61,61.77v-26a1.69,1.69,0,0,1,.48-1.15,1.62,1.62,0,0,1,1.15-.47h4a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.53.35,1.69,1.69,0,0,1,.48,1.15v26a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M185.78,61.77V50.41a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.64,1.64,0,0,1,.52-.35,1.51,1.51,0,0,1,.63-.13h4.86a1.44,1.44,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.86a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-2" d="M198.76,61.77V33.38a1.47,1.47,0,0,1,.13-.62,1.61,1.61,0,0,1,1.5-1h4.05a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M210.93,61.77V13.91a1.44,1.44,0,0,1,.13-.62,1.58,1.58,0,0,1,.35-.53,1.64,1.64,0,0,1,.52-.35,1.69,1.69,0,0,1,.63-.13h4.05a1.64,1.64,0,0,1,.62.13,1.61,1.61,0,0,1,1,1.5V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M223.1,61.77V39.87a1.69,1.69,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.68,1.68,0,0,1,.62-.13h4.06a1.64,1.64,0,0,1,.62.13,1.61,1.61,0,0,1,1,1.5v21.9a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.44,1.44,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-2" d="M235.27,61.77V43.11a1.67,1.67,0,0,1,.12-.62,1.77,1.77,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.87a1.63,1.63,0,0,1,.62.12,1.61,1.61,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.87a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M248.25,61.77V9a1.63,1.63,0,0,1,.12-.62,1.61,1.61,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M260.42,61.77V24.45a1.67,1.67,0,0,1,.12-.62,1.77,1.77,0,0,1,.88-.88,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H262a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M272.59,61.77V41.49a1.63,1.63,0,0,1,.12-.62,1.72,1.72,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M284.76,61.77V52.85a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.58,1.58,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62v8.92a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.87a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M297.74,61.77V36.62a1.67,1.67,0,0,1,.12-.62,1.7,1.7,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M309.91,61.77V13.91a1.62,1.62,0,0,1,.47-1.15,1.69,1.69,0,0,1,1.15-.48h4.06a1.69,1.69,0,0,1,1.15.48,1.75,1.75,0,0,1,.35.53,1.59,1.59,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M322.08,61.77V32.57a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.69,1.69,0,0,1,.53-.35,1.5,1.5,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.69,1.69,0,0,1,.53.35,1.83,1.83,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63v29.2a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H323.7a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M335.06,61.77V10.66a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.88,1.88,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.7,1.7,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M347.23,61.77V40.68a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.61,1.61,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M359.4,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.61,1.61,0,0,1,.87.88,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.44,1.44,0,0,1-.35.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H361a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M371.57,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M384.55,61.77V9a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M396.72,61.77V26.08a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.05a1.51,1.51,0,0,1,.63.13,1.63,1.63,0,0,1,.87.87,1.51,1.51,0,0,1,.13.63V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M408.88,61.77V26.08a1.69,1.69,0,0,1,.13-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.63,1.63,0,0,1,.87.87,1.51,1.51,0,0,1,.13.63V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M421.87,61.77V47.17a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.05a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62v14.6a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M434,61.77V55.28a1.69,1.69,0,0,1,.48-1.15,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4a1.59,1.59,0,0,1,.62.12,1.75,1.75,0,0,1,.53.35,1.69,1.69,0,0,1,.48,1.15v6.49a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M446.2,61.77V34.19a1.47,1.47,0,0,1,.13-.62,1.61,1.61,0,0,1,1.5-1h4.05a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.64,1.64,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M458.37,61.77V43.11a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.54,1.54,0,0,1,1.15-.48h4.86A1.58,1.58,0,0,1,466,42a1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13H460a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M471.35,61.77V53.66a1.47,1.47,0,0,1,.13-.62,1.58,1.58,0,0,1,.35-.53,1.64,1.64,0,0,1,.52-.35A1.68,1.68,0,0,1,473,52h4a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62v8.11a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M483.52,61.77V37.43a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.54,1.54,0,0,1,1.15-.48h4.05a1.63,1.63,0,0,1,.62.12,1.61,1.61,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.05a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M495.69,61.77V28.51a1.47,1.47,0,0,1,.13-.62,1.44,1.44,0,0,1,.35-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.87a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.44,1.44,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M508.67,61.77V51.23a1.51,1.51,0,0,1,.13-.63,1.64,1.64,0,0,1,.35-.52,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M520.84,61.77V19.59a1.54,1.54,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35A1.64,1.64,0,0,1,528,19a1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M533,61.77v-26a1.67,1.67,0,0,1,.12-.62,1.72,1.72,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.67,1.67,0,0,1,.12.62v26a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M545.18,61.77V34.19a1.63,1.63,0,0,1,.12-.62,1.75,1.75,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.68,1.68,0,0,1-.62.13H546.8a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M558.16,61.77V13.1a1.54,1.54,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.5,1.5,0,0,1,.62.13A1.69,1.69,0,0,1,565,12a1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M570.33,61.77V49.6a1.67,1.67,0,0,1,.12-.62,1.7,1.7,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36A1.67,1.67,0,0,1,572,48H576a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H572a1.69,1.69,0,0,1-1.15-.48,1.75,1.75,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M582.5,61.77V33.38a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12H589a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.58,1.58,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.87a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M595.48,61.77V49.6a1.67,1.67,0,0,1,.12-.62,1.54,1.54,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.72,1.72,0,0,1,.53.36,1.7,1.7,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48H597.1a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M607.65,61.77V52a1.62,1.62,0,0,1,.47-1.15,1.69,1.69,0,0,1,1.15-.48h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35A1.58,1.58,0,0,1,615,52v9.73a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M619.82,61.77V32.57a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.06a1.5,1.5,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.54,1.54,0,0,1,.48,1.15v29.2a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M632,61.77V17.15a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.7,1.7,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M645,61.77V29.32a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M657.14,61.77V16.34a1.63,1.63,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.64,1.64,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M669.31,61.77v-17a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13H675a1.51,1.51,0,0,1,.63.13,1.63,1.63,0,0,1,.87.87,1.51,1.51,0,0,1,.13.63v17a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M681.47,61.77V11.47a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.61,1.61,0,0,1,.53-.36,1.63,1.63,0,0,1,.62-.12H688a1.54,1.54,0,0,1,1.14.48,1.54,1.54,0,0,1,.35.52,1.5,1.5,0,0,1,.13.62v50.3a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H683.1a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-2" d="M694.46,61.77V17.15a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.75,1.75,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4a1.68,1.68,0,0,1,.63.12,1.83,1.83,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.5,1.5,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M706.62,61.77V18a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,1.15-.48h4a1.58,1.58,0,0,1,1.15.48,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M718.79,61.77v-30a1.51,1.51,0,0,1,.13-.63,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.44,1.44,0,0,1,.62-.13h4.86a1.44,1.44,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.51,1.51,0,0,1,.13.63v30a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13h-4.86a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M731.77,61.77V18a1.68,1.68,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,1.15-.48h4.05a1.58,1.58,0,0,1,1.15.48,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.13.62V61.77a1.64,1.64,0,0,1-.13.62,1.58,1.58,0,0,1-.88.88,1.6,1.6,0,0,1-.62.13H733.4a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/><path class="cls-1" d="M743.94,61.77v-43a1.5,1.5,0,0,1,.13-.62,1.54,1.54,0,0,1,.35-.52,1.64,1.64,0,0,1,.52-.35,1.51,1.51,0,0,1,.63-.13h4a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62v43a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.69,1.69,0,0,1-.63-.13,1.64,1.64,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M756.11,61.77V26.08a1.51,1.51,0,0,1,.13-.63,1.64,1.64,0,0,1,.35-.52,1.54,1.54,0,0,1,.52-.35,1.51,1.51,0,0,1,.63-.13h4a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4a1.69,1.69,0,0,1-.63-.13,1.54,1.54,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M768.28,61.77V51.23a1.51,1.51,0,0,1,.13-.63,1.49,1.49,0,0,1,.35-.52,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.87a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13H769.9a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.44,1.44,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-2" d="M781.26,61.77v-30a1.51,1.51,0,0,1,.13-.63,1.63,1.63,0,0,1,.87-.87,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.58,1.58,0,0,1,.53.35,1.54,1.54,0,0,1,.35.52,1.68,1.68,0,0,1,.12.63v30a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.58,1.58,0,0,1-.35-.53,1.47,1.47,0,0,1-.13-.62"/><path class="cls-1" d="M793.43,61.77V25.26a1.54,1.54,0,0,1,.48-1.14,1.41,1.41,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.44,1.44,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M805.6,61.77V53.66a1.63,1.63,0,0,1,.12-.62,1.61,1.61,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.87a1.63,1.63,0,0,1,.62.12,1.58,1.58,0,0,1,.88.88,1.63,1.63,0,0,1,.12.62v8.11a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13h-4.87a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M818.58,61.77V39.06a1.58,1.58,0,0,1,.48-1.15,1.54,1.54,0,0,1,.52-.35,1.5,1.5,0,0,1,.62-.13h4.06a1.47,1.47,0,0,1,.62.13,1.61,1.61,0,0,1,1,1.5V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.88.88,1.64,1.64,0,0,1-.62.13H820.2a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M830.75,61.77V15.53a1.63,1.63,0,0,1,.12-.62,1.61,1.61,0,0,1,.36-.53,1.54,1.54,0,0,1,.52-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.69,1.69,0,0,1,.53.35,1.58,1.58,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.68,1.68,0,0,1-.62-.13,1.54,1.54,0,0,1-.52-.35,1.61,1.61,0,0,1-.36-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M842.92,61.77V55.28a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.88,1.88,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.88,1.88,0,0,1,.53.35,1.69,1.69,0,0,1,.35.53,1.67,1.67,0,0,1,.12.62v6.49a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M855.09,61.77V25.26a1.67,1.67,0,0,1,.12-.62,1.64,1.64,0,0,1,.35-.52,1.53,1.53,0,0,1,.53-.35,1.5,1.5,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.53,1.53,0,0,1,.53.35,1.64,1.64,0,0,1,.35.52,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.58,1.58,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.87a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-2" d="M868.07,61.77V26.89a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.35-.53,1.69,1.69,0,0,1,1.15-.48h4.06a1.69,1.69,0,0,1,1.15.48,1.75,1.75,0,0,1,.35.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.75,1.75,0,0,1-.35.53,1.69,1.69,0,0,1-1.15.48h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M880.24,61.77V42.3a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.88,1.88,0,0,1,.53-.35,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.7,1.7,0,0,1,.52.35,1.72,1.72,0,0,1,.36.53,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M892.41,61.77V22a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.87a1.67,1.67,0,0,1,.62.12,1.54,1.54,0,0,1,.52.35,1.61,1.61,0,0,1,.36.53,1.63,1.63,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H894a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M905.39,61.77V43.92a1.67,1.67,0,0,1,.12-.62,1.54,1.54,0,0,1,.35-.52,1.72,1.72,0,0,1,.53-.36,1.67,1.67,0,0,1,.62-.12h4.06a1.67,1.67,0,0,1,.62.12,1.77,1.77,0,0,1,.88.88,1.67,1.67,0,0,1,.12.62V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13H907a1.69,1.69,0,0,1-1.15-.48,1.58,1.58,0,0,1-.35-.53,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M917.56,61.77V45.55a1.6,1.6,0,0,1,1-1.5,1.64,1.64,0,0,1,.62-.13h4.06a1.68,1.68,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.58,1.58,0,0,1,.48,1.15V61.77a1.63,1.63,0,0,1-.12.62,1.61,1.61,0,0,1-.36.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.06a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M929.73,61.77V14.72a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M941.9,61.77V51.23a1.68,1.68,0,0,1,.12-.63,1.64,1.64,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.47,1.47,0,0,1,.62-.13h4.87a1.5,1.5,0,0,1,.62.13,1.54,1.54,0,0,1,.52.35,1.64,1.64,0,0,1,.35.52,1.51,1.51,0,0,1,.13.63V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.54,1.54,0,0,1-.52.35,1.68,1.68,0,0,1-.62.13h-4.87a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M954.88,61.77v-13a1.67,1.67,0,0,1,.12-.62,1.69,1.69,0,0,1,.35-.53,1.58,1.58,0,0,1,.53-.35,1.63,1.63,0,0,1,.62-.12h4a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.69,1.69,0,0,1,.35.53,1.5,1.5,0,0,1,.13.62v13a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M967.05,61.77V35a1.63,1.63,0,0,1,.12-.62,1.58,1.58,0,0,1,.88-.88,1.63,1.63,0,0,1,.62-.12h4.05a1.68,1.68,0,0,1,.63.12,1.64,1.64,0,0,1,.52.35,1.58,1.58,0,0,1,.35.53,1.47,1.47,0,0,1,.13.62V61.77a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.05a1.64,1.64,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.63,1.63,0,0,1-.12-.62"/><path class="cls-1" d="M979.21,61.77v-30a1.69,1.69,0,0,1,.13-.63,1.54,1.54,0,0,1,.35-.52,1.58,1.58,0,0,1,.53-.35,1.44,1.44,0,0,1,.62-.13h4.86a1.51,1.51,0,0,1,.63.13,1.64,1.64,0,0,1,.52.35,1.54,1.54,0,0,1,.35.52,1.51,1.51,0,0,1,.13.63v30a1.47,1.47,0,0,1-.13.62,1.58,1.58,0,0,1-.35.53,1.64,1.64,0,0,1-.52.35,1.69,1.69,0,0,1-.63.13h-4.86a1.6,1.6,0,0,1-.62-.13,1.58,1.58,0,0,1-.88-.88,1.64,1.64,0,0,1-.13-.62"/></svg>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer section--dark">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#hero" class="brand brand--footer"><img src="img/logo_footer.svg" alt="QSheets" class="brand__logo brand__logo--footer" /></a>
-        <p>La solution pour des cue sheets justes, rapides et sans erreur. Pour les
-          studios, les boîtes de prod, les compositeurs et tous ceux qui en ont assez
-          d'Excel à minuit.</p>
-      </div>
-      <div class="footer__col">
-        <h4>PRODUIT</h4>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#productions">Pour qui</a>
-        <a href="#faq">Centre d'aide</a>
-      </div>
-      <div class="footer__col">
-        <h4>SOCIÉTÉ</h4>
-        <a href="#equipe">L'équipe</a>
-        <a href="#cta">Contact</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Email</a>
-      </div>
-      <div class="footer__col">
-        <h4>LÉGAL</h4>
-        <a href="page.html">Mentions légales</a>
-        <a href="page.html">Politique de confidentialité</a>
-        <a href="page.html">CGU</a>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>© 2026 QSHEETS — TOUS DROITS RÉSERVÉS.</p>
-    </div>
-  </footer>
-
-  <!-- ===================== LIGHTBOX DÉMO ===================== -->
-  <div class="lightbox" id="demoLightbox" aria-hidden="true">
-    <div class="lightbox__backdrop" data-close></div>
-    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Démo QSheets">
-      <button class="lightbox__close" type="button" data-close aria-label="Fermer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-      <div class="lightbox__video">
-        <!-- ▼▼▼ REMPLACEZ la source par votre vidéo (mp4) ▼▼▼ -->
-        <video id="demoVideo" controls playsinline preload="none" poster="">
-          <source src="" type="video/mp4" />
-          Votre navigateur ne prend pas en charge la lecture vidéo.
-        </video>
-        <!-- ▲▲▲ Pour une vidéo YouTube/Vimeo : remplacez <video>…</video> par une <iframe> ▲▲▲ -->
-      </div>
-    </div>
-  </div>
-
-  <script src="js/anime.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="js/anime.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

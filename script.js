@@ -199,6 +199,30 @@
   const waveSvg = document.querySelector(".cta__wave");
   if (hasAnime && waveSvg) {
     const bars = waveSvg.querySelectorAll("path");
+
+    // Alignement sur une ligne de base commune : on décale chaque barre
+    // pour que son bas coïncide avec la barre la plus basse.
+    try {
+      const SVGNS = "http://www.w3.org/2000/svg";
+      const bottoms = [];
+      bars.forEach((p) => {
+        const b = p.getBBox();
+        bottoms.push(b.y + b.height);
+      });
+      const baseline = Math.max.apply(null, bottoms);
+      bars.forEach((p, i) => {
+        const dy = baseline - bottoms[i];
+        if (dy > 0.01) {
+          const g = document.createElementNS(SVGNS, "g");
+          g.setAttribute("transform", "translate(0 " + dy.toFixed(2) + ")");
+          p.parentNode.insertBefore(g, p);
+          g.appendChild(p); // la barre est posée sur la ligne de base
+        }
+      });
+    } catch (e) {
+      /* getBBox indisponible : on garde le rendu d'origine */
+    }
+
     const eq = anime({
       targets: bars,
       scaleY: [
